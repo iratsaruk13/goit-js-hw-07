@@ -8,9 +8,9 @@ import { galleryItems } from "./gallery-items.js";
 function createGalleryMarkup(items) {
   return items
     .map(({ preview, original, description }) => {
-      return `<a class="gallery__item" href="${original}">
-      <img class="gallery__image" src="${preview}" alt="${description}" />
-    </a>`;
+      return `<li> <a class="gallery__item" href="${original}">
+      <img class="gallery__image" src="${preview}" alt="${description}" style="display: block"/>
+    </a>  </li>` ;
     })
     .join("");
 }
