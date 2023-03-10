@@ -9,7 +9,11 @@ function createGalleryMarkup(items) {
   return items
     .map(({ preview, original, description }) => {
       return `<li> <a class="gallery__item" href="${original}">
-      <img class="gallery__image" src="${preview}" alt="${description}" style="display: block"/>
+      <img loading="lazy"
+      class="gallery__image" 
+      src="${preview}" 
+      alt="${description}" 
+      style="display: block"/>
     </a>  </li>` ;
     })
     .join("");
